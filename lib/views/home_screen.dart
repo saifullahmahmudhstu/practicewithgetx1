@@ -35,6 +35,9 @@ class HomeScreen extends StatelessWidget {
 
               title: Text(_controller.countryList[index]),
               subtitle: Text('$index'),
+              leading: const Icon(Icons.map_sharp),
+              trailing: const Icon(Icons.verified),
+                selectedColor: Colors.grey,
               onTap: (){
                 _controller.onDeleteData(index);
               },

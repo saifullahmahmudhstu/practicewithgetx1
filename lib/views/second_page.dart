@@ -21,11 +21,25 @@ class SecondPage extends StatelessWidget {
           itemCount: _controller2.modelSim.length,
           itemBuilder: (context ,index ){
             return ListTile(
+              onTap: (){
+                Get.defaultDialog(
+                  title: 'Pressed on ${_controller2.modelSim[index].company}',
+                  middleText: 'Telecom Company From ${_controller2.modelSim[index].country}',
+
+
+
+                );
+              },
               title: Text(_controller2.modelSim[index].company),
               subtitle: Text(_controller2.modelSim[index].country),
-              trailing:  Image.network(_controller2.modelSim[0].icon1.toString()),
-             leading:  Text(_controller2.modelSim[index].company[0])
-                
+              trailing:  Text(_controller2.modelSim[index].company[0].toString()),
+
+
+            //Ternary Operator use here
+             leading: _controller2.modelSim[index].icon1 ==null ?
+             Text(_controller2.modelSim[index].company[0],style: TextStyle(fontSize: 30),) :
+             Image.network(_controller2.modelSim[0].icon1.toString(),height: 30,width: 30,) ,
+
             );
           }),),
     );
