@@ -14,7 +14,7 @@ class SecondPage extends StatelessWidget {
               onPressed: (){
                 _controller2.addDataToModel();
               },
-              icon: const Icon(Icons.shopping_cart))
+              icon: const Icon(Icons.add_circle))
         ],
       ),
       body: Obx(()=>ListView.builder(
@@ -22,7 +22,10 @@ class SecondPage extends StatelessWidget {
           itemBuilder: (context ,index ){
             return ListTile(
               title: Text(_controller2.modelSim[index].company),
-              subtitle: Text('$index'),
+              subtitle: Text(_controller2.modelSim[index].country),
+              trailing:  Image.network(_controller2.modelSim[0].icon1.toString()),
+             leading:  Text(_controller2.modelSim[index].company[0])
+                
             );
           }),),
     );

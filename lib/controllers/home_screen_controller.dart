@@ -1,6 +1,6 @@
 
 import 'package:get/get.dart';
-import 'package:practice_with_getx1/models/sim_company_model.dart';
+
 
 class HomeScreenController extends GetxController{
 
@@ -12,11 +12,11 @@ var countryList=[].obs;
   void addCountryList() {
 
     countryList.add('Bangladesh');
-    // countryList.add('India');
-    // countryList.add('Bhutan');
-    // countryList.add('Pakistan');
-    // countryList.add('Maldives');
-    // countryList.add('Nepal');
+    countryList.add('India');
+    countryList.add('Bhutan');
+    countryList.add('Pakistan');
+    countryList.add('Maldives');
+    countryList.add('Nepal');
   }
 
   void onDeleteData(i) {
