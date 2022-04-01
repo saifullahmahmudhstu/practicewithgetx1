@@ -37,7 +37,7 @@ class SecondPage extends StatelessWidget {
 
             //Ternary Operator use here
              leading: _controller2.modelSim[index].icon1 ==null ?
-             Text(_controller2.modelSim[index].company[0],style: TextStyle(fontSize: 30),) :
+             Text(_controller2.modelSim[index].company[0],style: const TextStyle(fontSize: 30),) :
              Image.network(_controller2.modelSim[0].icon1.toString(),height: 30,width: 30,) ,
 
             );
